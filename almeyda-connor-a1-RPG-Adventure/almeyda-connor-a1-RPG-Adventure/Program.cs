@@ -185,7 +185,7 @@ if (input ==2)
             if (weapon == 1) ;
             {
                 treasure += 1;
-                Console.WriteLine("You dig in the dirt using your shovel and find an golden coin from the 1800s. You decide to pocket it.");
+                Console.WriteLine("You dig in the dirt using your shovel and find a note which says 'InflatableTube'. What could it mean? Whatever it means, you decide to pocket it.");
                 ;
             }
             if (weapon == 0)
@@ -226,7 +226,7 @@ if (input == 3)
     {
         time += 1;
         treasure += 1;
-        Console.WriteLine("You take a look behind the tree and see something behind it: an 'InflatableTube'.");
+        Console.WriteLine("You take a look behind the tree and find someone's wallet");
         ;
     }
     if (inputmap <= 2)
@@ -254,14 +254,16 @@ if (input == 3)
         }
             ;
     }
-    if (inputmap<=3)
+    if (inputmap==4)
     {
         treasure += 1;
-        Console.WriteLine("You take a look behind the tree and see something behind it: an 'InflatableTube'.");
+        time += 1;
+        Console.WriteLine("You take a look behind the tree and find someone's wallet");
         ;
     }
-    if (inputmap == 3)
+    if (inputmap >= 3)
     {
+        time += 1;
         Console.WriteLine("Going right, you come across a cave and next to it is a bear. The bear immediatly notices you and mauls you. Everything goes dark...");
         alive = 0;
         ;
