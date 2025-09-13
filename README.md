@@ -1,1 +1,3 @@
 # almeyda-connor-a1-RPG-Adventure
+
+#### A Text-Based Adventure that takes place in a forest, with you needing to get back to your home before you food gets cold. The game will prompt you with a message showing you the options you can do, such as going right, left or forward, along with a number next to it. Press the number associated with the option then press enter to select that option. At one point, you need to type your selection, and the solution to it is a little hidden. Can you get home before your food gets cold? What treasures will you find on your way? Find out in Escape the Forest, a text based Adventure by Connor Almeyda. 
