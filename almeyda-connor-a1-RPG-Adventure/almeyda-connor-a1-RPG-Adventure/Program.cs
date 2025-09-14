@@ -19,16 +19,14 @@ time++;
     { 
     // Mushroom Room
 
-    Console.Write("You decide to take the left path. You eventually find another fork in the road, this time going right or straight.");
-    Console.WriteLine("You also notice a small patch of mushrooms. Do you take one or continue on a path?");
+    Console.WriteLine("You decide to take the left path. You eventually find another fork in the road, this time going right or straight.\nYou also notice a small patch of mushrooms. Do you take one or continue on a path?");
     Console.WriteLine("1) Eat Shroom");
     Console.WriteLine("2) Forward");
     Console.WriteLine("3) Right");
     int inputm = int.Parse(Console.ReadLine());
     if (inputm == 1)
     {
-        Console.WriteLine("You decide to eat a mushroom. Your whole world shift, as psychadelic patterns begin to appear in front of you.");
-        Console.WriteLine("Past nightmares manifest in reality, as you elongate stretching to infinity. Eventually everything goes dark....");
+        Console.WriteLine("You decide to eat a mushroom. Your whole world shift, as psychadelic patterns begin to appear in front of you.\nPast nightmares manifest in reality, as you elongate stretching to infinity. Eventually everything goes dark....");
         alive = 0;
         ;
     }
@@ -71,6 +69,7 @@ time++;
 
                 if (CanCross)
                 {
+                    time += 1;
                     Console.WriteLine("You cross the river using the inflatable tube, going all the way down the river. Fortunatly the wolves cannot swim and you make it back to your house.");
                     ;
                 }
@@ -78,6 +77,7 @@ time++;
                 {
                     Console.WriteLine("You attempt to do whatever you said, but it fails. You drown or get eaten by wolves, and die");
                     alive = 0;
+                    time += 1;
                     ;
                 }
                 ;
@@ -95,7 +95,7 @@ time++;
         }
         else if (inputw == 3)
         {
-            Console.WriteLine("You attempt to pet one of the wolves, putting your hand slowly near it. The wolf then immediatly bites your hand. You scream out in pain, as the rest of the wolves attack you with a flurry of bites. Everything goes dark...");
+            Console.WriteLine("You attempt to pet one of the wolves, putting your hand slowly near it. The wolf then immediatly bites your hand.\nYou scream out in pain, as the rest of the wolves attack you with a flurry of bites. Everything goes dark...");
             alive = 0;
             ;
         }
@@ -103,9 +103,9 @@ time++;
     }
     else if (inputm == 3)
     {
-        // Penultimate Room of Normal Ending
+        // Penultimate Room of the Wolverine
         time += 1;
-        Console.WriteLine("You walk to the right, going down an inclined hill. Eventually you make it to path going to the left. However, you notice a tree with a hole inside of it, along with a small patch of dirt next to it. You hear the howling of wolves in the distance behind you, and know you can only explore one before needing to go left. What do you do?");
+        Console.WriteLine("You walk to the right, going down an inclined hill. Eventually you make it to path going to the left.\nHowever, you notice a tree with a hole inside of it, along with a small patch of dirt next to it. You hear the howling of wolves in the distance behind you, and know you can only explore one before needing to go left. What do you do?");
         Console.WriteLine("1) Don't explore");
         Console.WriteLine("2) Explore Tree");
         Console.WriteLine("3) Explore Dirt");
@@ -295,5 +295,5 @@ else
     Console.WriteLine($"You Lose, {name}");
     ;
 }
-Console.WriteLine($"Time... {time}");
+Console.WriteLine($"Time... {time} choices");
 Console.WriteLine($"Treasure... {treasure}");
