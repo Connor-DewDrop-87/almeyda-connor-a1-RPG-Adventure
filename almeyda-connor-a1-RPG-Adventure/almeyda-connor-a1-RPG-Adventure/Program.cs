@@ -1,11 +1,14 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System.ComponentModel.Design;
 using System.Security.Cryptography;
+// Set up
+Console.WriteLine("What is your name?");
+string name = Console.ReadLine();
 int time = int.Parse("0");
 int weapon = 0;
 int alive = 1;
 int treasure = 0;
-Console.WriteLine("You're on a path in the woods. You need to get home quickly, lest the wolves find you or your food gets too cold. Before you are 3 paths, one to the right, one to the left and another forward. Where do you go?");
+Console.WriteLine($"{name}, you're on a path in the woods. You need to get home quickly, lest the wolves find you or your food gets too cold. Before you are 3 paths, one to the right, one to the left and another forward. Where do you go?");
 Console.WriteLine("1) Left");
 Console.WriteLine("2) Forward");
 Console.WriteLine("3) Right");
@@ -159,6 +162,7 @@ if (input ==2)
     {
         Console.WriteLine("You decide to go into the mineshaft. It's incredibly dark, but you continue onward, until eventually you trip over a rock into a minecart, which immediatly begins to move. Eventually a sudden flash of light happens as you are engulfed in lava.");
         alive = 0;
+        time += 1;
         ;
     }
     if (inputc < 3) 
@@ -277,18 +281,18 @@ bool aliveontime = ontime && isalive;
 bool alivenottime = !ontime && isalive;
 if (aliveontime==true)
 {
-    Console.WriteLine("You win and your dinner isn't cold!"); ;
+    Console.WriteLine($"You win {name} and your dinner isn't cold!"); ;
     alive = 1;
 }
 else if (alivenottime==true) 
 {
-    Console.WriteLine("You win but at what cost. Your dinner is cold!");
+    Console.WriteLine($"You win {name} but at what cost. Your dinner, is cold!");
     ;
     alive = 1;
 }
 else 
 {
-    Console.WriteLine("You Lose");
+    Console.WriteLine($"You Lose, {name}");
     ;
 }
 Console.WriteLine($"Time... {time}");
