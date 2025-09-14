@@ -8,7 +8,7 @@ int time = int.Parse("0");
 int weapon = 0;
 int alive = 1;
 int treasure = 0;
-Console.WriteLine($"{name}, you're on a path in the woods. You need to get home quickly, lest the wolves find you or your food gets too cold. Before you are 3 paths, one to the right, one to the left and another forward. Where do you go?");
+Console.WriteLine($"{name}, you're on a path in the woods. You need to get home quickly, lest the wolves find you or your food gets too cold.\nBefore you are 3 paths, one to the right, one to the left and another forward. Where do you go?");
 Console.WriteLine("1) Left");
 Console.WriteLine("2) Forward");
 Console.WriteLine("3) Right");
@@ -145,7 +145,7 @@ time++;
 if (input ==2)
 {
     // Mine Shaft
-    Console.WriteLine("Going Forward, you go down a small incline hill and find yourself in front of a mine shaft with a shovel next to it. Additionally, there's a path going down another hill. What do you do?");
+    Console.WriteLine("Going Forward, you go down a small incline hill and find yourself in front of a mine shaft with a shovel next to it. Additionally, there's a path going down another hill.\nWhat do you do?");
     Console.WriteLine("1) Left");
     Console.WriteLine("2) Take the shovel");
     Console.WriteLine("3) Go into the shaft");
@@ -160,7 +160,7 @@ if (input ==2)
     }
     else if (inputc == 3)
     {
-        Console.WriteLine("You decide to go into the mineshaft. It's incredibly dark, but you continue onward, until eventually you trip over a rock into a minecart, which immediatly begins to move. Eventually a sudden flash of light happens as you are engulfed in lava.");
+        Console.WriteLine("You decide to go into the mineshaft. It's incredibly dark, but you continue onward, until eventually you trip over a rock into a minecart, which immediatly begins to move.\nEventually a sudden flash of light happens as you are engulfed in lava.");
         alive = 0;
         time += 1;
         ;
@@ -169,7 +169,7 @@ if (input ==2)
     {
         // Penultimate Room of Normal Ending
         time += 1;
-        Console.WriteLine("Walking left, you go down an inclined hill. Eventually you make it to path going straight. However, you notice a tree with a hole inside of it, along with a small patch of dirt next to it. You hear the howling of wolves in the distance behind you, and know you can only explore one before needing to go left. What do you do?");
+        Console.WriteLine("Walking left, you go down an inclined hill. Eventually you make it to path going straight.\nHowever, you notice a tree with a hole inside of it, along with a small patch of dirt next to it.\nYou hear the howling of wolves in the distance behind you, and know you can only explore one before needing to go left. What do you do?");
         Console.WriteLine("1) Don't explore");
         Console.WriteLine("2) Explore Tree");
         Console.WriteLine("3) Explore Dirt");
@@ -186,7 +186,7 @@ if (input ==2)
         else if (inputp == 3)
         {
             time += 1;
-            if (weapon == 1) ;
+            if (weapon == 1) 
             {
                 treasure += 1;
                 Console.WriteLine("You dig in the dirt using your shovel and find a note which says 'InflatableTube'. What could it mean? Whatever it means, you decide to pocket it.");
